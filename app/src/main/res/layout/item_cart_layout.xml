@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:id="@+id/ll_cart_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_dashboard_background"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/iv_cart_item_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorImageViewBackground"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cart_item_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.example.ecommerce.utils.MSPTextView
+            android:id="@+id/tv_cart_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_value_text_color"
+            android:textSize="16sp"
+            tools:text="Cart Item Title"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.ecommerce.utils.MSPTextViewBold
+                android:id="@+id/tv_cart_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/item_value_text_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="$100"/>
+
+            <LinearLayout
+                android:id="@+id/ll_update_cart_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/tv_cart_item_price"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ib_remove_cart_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/ib_cart_item_padding"
+                    android:src="@drawable/ic_vector_remove"/>
+
+                <com.example.ecommerce.utils.MSPTextView
+                    android:id="@+id/tv_cart_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_grey_border_background"
+                    android:paddingStart="16dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/cart_quantity_textSize"
+                    android:textStyle="bold"
+                    tools:text="1"/>
+
+                <ImageButton
+                    android:id="@+id/ib_add_cart_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/ib_cart_item_padding"
+                    android:src="@drawable/ic_vector_add"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_delete_cart_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/image"
+        android:padding="5dp"
+        android:src="@drawable/ic_vector_delete"
+        android:visibility="visible"
+        tools:visibility="visible"/>
+
+</LinearLayout>
