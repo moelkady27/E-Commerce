@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.load.ImageHeaderParser.ImageType
 import com.example.ecommerce.models.*
 import com.example.ecommerce.ui.activities.*
 import com.example.ecommerce.ui.fragments.DashboardFragment
@@ -16,10 +15,8 @@ import com.example.ecommerce.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import kotlinx.coroutines.flow.merge
 
 class FireStoreClass {
 
