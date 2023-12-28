@@ -1,18 +1,18 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
-    id 'com.google.gms.google-services'
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-android-extensions")
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace 'com.example.ecommerce'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.ecommerce"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

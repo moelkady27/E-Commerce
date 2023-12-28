@@ -49,6 +49,7 @@ class FireStoreClass {
 
         var currentUserID = ""
         if (currentUser != null) {
+
             currentUserID = currentUser.uid
         }
 
